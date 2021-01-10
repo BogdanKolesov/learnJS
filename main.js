@@ -43,3 +43,26 @@ console.log(images[0]);
 
 //const category = 'toys';
 //console.log(`https://some.com/${category}/3`); //БЭКТИКИ
+
+//ПРАКТИКА №1!!!!!!!!!!!!!!!!!!!
+
+
+const numberOfFilms = +prompt('Сколько фильмов Вы посмотрели?', '1');
+
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
+
+const a = prompt('Один из фильмов?', '');
+const b = prompt('Оценка фильма', '');
+const c = prompt('Один из фильмов?', '');
+const d = prompt('Оценка фильма', '');
+
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
+
+console.log(personalMovieDB.movies);
