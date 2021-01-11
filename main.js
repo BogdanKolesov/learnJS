@@ -171,3 +171,64 @@ if (personalMovieDB.count < 10) {
     console.log('Произошла ошибка');
 }
 */
+
+//Функции, стрелочные функции (ES6)
+/*
+function showFirstMessage() { //обычная функция. В скобках архументы функции
+    console.log("Hello World");
+}
+showFirstMessage();
+
+function showText(text) {
+    console.log(text);
+    let num = 20; //Локальные переменные существуют только внутри блока функций
+}
+showText("That text");
+
+//.....................................
+
+//Замыкания функций - функция со всеми внешними переменными, которые ей доступны
+let num = 30;
+
+function showText(text) {
+    console.log(text);
+    let num = 20;
+    console.log(num);
+}
+showText(num);
+
+//Калькулятор, например. Function Decloration. Существует до того, как ее объявили
+function calc(a, b) {
+    return (a + b);
+}
+console.log(calc(4, 3));
+console.log(calc(2, -33));
+console.log(calc(5, 1));
+
+//Вывод функции наружу
+function ret() {
+    let num = 50;
+
+    //
+
+
+    return num;
+}
+
+const anotherNum = ret();
+console.log(anotherNum);
+
+
+//Function Expression. Существует после объявления
+const logger = function() {
+    console.log("Hello");
+}; //В таких фнукциях нужно ставить точку с запятой
+logger();
+
+//Стрелочные функции
+
+const calc = (a, b) => {
+    console.log(1);
+    return a + b
+};
+*/
