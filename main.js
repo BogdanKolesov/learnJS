@@ -398,3 +398,126 @@ console.log(counter);
 //console.log(Object.keys(options).length); //Лучше использовать вместо counter
 
 //for of не работает  для объекта
+
+//МАССИВЫ И ПСЕВДОМАССИВЫ
+//В массиве элементы лежат по порядку
+/*
+const arr = [29, 211, 3, 15, 14, 9];
+arr.sort(compareNum);
+
+
+function compareNum(a, b) {
+    return a - b;
+}
+console.log(arr);
+
+*/
+/*
+const str = prompt('', '');
+const products = str.split('', '');
+console.log(products.join(' ; '));
+*/
+
+/*
+arr.forEach(function(item, i, arr) { //Самый нормальный перебор, если не нужен break и continue
+    console.log(`${i}: ${item} внутри масива ${arr}`);
+});
+
+//arr.pop(); //удалить элементы
+arr.push(10); //добавить элемент
+
+//console.log(arr);
+
+for (let i = 0; i < arr.length; i++) { //перебор массива
+    console.log(arr[i]);
+}
+
+for (let value of arr) { //тоже перебор массива
+    console.log(value);
+}
+*/
+
+//SPREAD - ОПЕРАТОР
+/*
+let a = 5,
+    b = a;
+b = b + 5;
+console.log(b);
+console.log(a);
+
+const obj = {
+    a: 5,
+    b: 1
+};
+// const copy = obj; //передачи ссылки на объект
+// copy.a = 10;
+
+// console.log(copy);
+// console.log(obj);
+
+function copy(mainObj) {
+    let objCopy = {};
+
+    let key;
+    for (key in mainObj) {
+        objCopy[key] = mainObj[key];
+    }
+    return objCopy;
+}
+
+const numbers = {
+    a: 2,
+    b: 5,
+    c: {
+        x: 7,
+        y: 4
+    }
+};
+const newNumbers = copy(numbers);
+newNumbers.a = 10;
+console.log(newNumbers);
+console.log(numbers);
+
+//Копии объектов бывают глубокие и поверхностные
+
+const add = {
+    d: 17,
+    e: 20
+};
+
+console.log(Object.assign(numbers, add)); //Соединение объектов
+
+const clone = Object.assign({}, add);
+clone.d = 20;
+
+console.log(add);
+console.log(clone);
+
+//Создание копии массива
+const oldArray = ['a', 'b', 'c'];
+const newArray = oldArray.slice();
+
+newArray[2] = 'ardgvbv ';
+console.log(oldArray);
+console.log(newArray);
+
+//Поверхностная копия в ES6 - ES8 Spread - оператор разворота (три точки)
+
+const video = ['youtube', 'vimeo', 'rutube'],
+    blogs = ['wordpress', 'livejournal', 'blogger'],
+    internet = [...video, ...blogs, 'vk', 'facebook'];
+
+console.log(internet);
+
+const arrrraay = [1, 2];
+const newArrraay = [...arrrraay];
+
+const q = {
+    one: 1,
+    two: 2
+};
+const newObj = {...q };
+console.log(newObj);
+*/
+
+//Основы ООП
