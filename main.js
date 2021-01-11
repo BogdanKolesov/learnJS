@@ -337,4 +337,16 @@ function writeYourGenres() {
 writeYourGenres();
 */
 
-//CALLBACK - ФУНКЦИИ
+//CALLBACK - ФУНКЦИИ - функция, которая должна быть выполнена после завершения предыдущей
+/*
+function learnJS(lang, callback) {
+    console.log(`Я учу: ${lang}`);
+}
+
+function done() {
+    console.log('Я прошел этот урок!');
+}
+
+learnJS('JavaScript', done);
+//Callback позволяет выполнить функции строго одна за другой
+*/
