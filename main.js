@@ -232,3 +232,109 @@ const calc = (a, b) => {
     return a + b
 };
 */
+
+//МЕТОДЫ И СВОЙСТВА СТРОК И ЧИСЕЛ
+/*
+const str = "text";
+console.log(str.length);
+console.log(str[1]);
+console.log(str.toUpperCase());
+
+const arr = [1, 2, 4];
+console.log(arr.length);
+
+const fruit = "Some fruit";
+console.log(fruit.indexOf("fruit")); //поиск внутри строки
+
+const logg = "Hello world";
+console.log(logg.slice(6, 11));
+console.log(logg.slice(6)); //вырезать строку с 7 символа до конца
+console.log(logg.slice(-5, -1)); //отсчет справа
+
+console.log(logg.substring(6, 11)); //не поддерживает отрицательные значения
+
+console.log(logg.substr(6, 5)); //Второй аргумент - количество символов, которые нужно вырезать
+
+const num = 12.2;
+console.log(Math.round(num)); //округление
+
+const test = "12.2px";
+console.log(parseInt(test)); //Извлечь целое число из строки
+console.log(parseFloat(test)); //Извлечь дробное число
+
+*/
+
+//Практика №3. ФУНКЦИИ
+/*
+let numberOfFilms;
+
+function start() {
+    numberOfFilms = +prompt('Сколько фильмов Вы уже посмотрели?', '');
+
+    while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
+        numberOfFilms = +prompt('Сколько фильмов Вы уже посмотрели?', '');
+    }
+}
+start();
+
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
+
+
+function rememberMyFilms() {
+    for (let i = 0; i < 2; i++) {
+        if (i === 2) {
+            break; //Закончить
+        }
+        const a = prompt('Один из фильмов?', ''),
+            b = prompt('Оценка фильма', '');
+
+
+        if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+            personalMovieDB.movies[a] = b;
+        } else {
+            i--;
+        }
+
+    }
+}
+
+rememberMyFilms();
+
+console.log(personalMovieDB.movies);
+
+
+function detectPersonalLevel() {
+    if (personalMovieDB.count < 10) {
+        console.log('Много фильмов');
+    } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
+        console.log('Вы - классический зритель');
+    } else if (personalMovieDB.count >= 30) {
+        console.log('Вы - киноман!');
+    } else {
+        console.log('Произошла ошибка');
+    }
+}
+
+function showMyDB(hidden) {
+    if (!hidden) {
+        console.log(personalMovieDB);
+    }
+}
+showMyDB(personalMovieDB.privat);
+
+function writeYourGenres() {
+    for (let i = 1; i <= 3; i++) {
+        const genre = prompt(`Ваш любимый жанр под номмером ${i}`);
+        personalMovieDB.genres[i - 1] = genre;
+    }
+}
+writeYourGenres();
+*/
+
+//CALLBACK - ФУНКЦИИ
