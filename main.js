@@ -635,3 +635,6 @@ let answ = +prompt('Hello', '');
 // 0, '', null, undefined, NaN === false. Остальное - true
 
 */
+
+//ПОЛУЧЕНИЕ ЭЛЕМЕНТОВ СО СТРАНИЦЫ
+
