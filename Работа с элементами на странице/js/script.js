@@ -20,7 +20,7 @@ circles[0].style.backgroundColor = 'red';
 box.style.cssText = 'background-color: blue; width: 500px';
 
 
-//Применение для всеъ элементов
+//Применение для всех элементов
 for (let i = 0; i < hearts.lenght; i++) {
     hearts[i].style.backgroundColor = 'blue';
 }
