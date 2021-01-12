@@ -520,4 +520,118 @@ const newObj = {...q };
 console.log(newObj);
 */
 
-//Основы ООП
+//ОСНОВЫ ООП
+/*
+const soldier = {
+    health: 400,
+    armor: 100
+};
+
+// const john = {
+//     health: 100
+// };
+
+// john.__proto__ = soldier; //устаревший метод
+
+// console.log(john.armor);
+
+const john = Object.create(soldier); //Правильное создание наследников прототипа
+*/
+
+//ПРАКТИКА №4........._______________________________________________
+
+/*
+
+
+const personalMovieDB = {
+    count: 0,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false,
+    start: function() {
+        personalMovieDB.count = +prompt('Сколько фильмов Вы уже посмотрели?', '');
+
+        while (personalMovieDB.count == '' || personalMovieDB.count == null || isNaN(personalMovieDB.count)) {
+            personalMovieDB.count = +prompt('Сколько фильмов Вы уже посмотрели?', '');
+        }
+    },
+    rememberMyFilms: function() {
+        for (let i = 0; i < 2; i++) {
+            if (i === 2) {
+                break; //Закончить
+            }
+            const a = prompt('Один из фильмов?', ''),
+                b = prompt('Оценка фильма', '');
+
+
+            if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+                personalMovieDB.movies[a] = b;
+            } else {
+                i--;
+            }
+
+        }
+    },
+    detectPersonalLevel: function() {
+        if (personalMovieDB.count < 10) {
+            console.log('Много фильмов');
+        } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
+            console.log('Вы - классический зритель');
+        } else if (personalMovieDB.count >= 30) {
+            console.log('Вы - киноман!');
+        } else {
+            console.log('Произошла ошибка');
+        }
+    },
+    showMyDB: function(hidden) {
+        if (!hidden) {
+            console.log(personalMovieDB);
+        }
+    },
+    writeYourGenres: function() {
+        for (let i = 1; i <= 3; i++) {
+            const genre = prompt(`Ваш любимый жанр под номмером ${i}`);
+            if (genre === '' || genre === null) {
+                console.log('Некорректные данные');
+                i--;
+            } else {
+                personalMovieDB.genres[i - 1] = genre;
+            }
+        }
+        personalMovieDB.genres.forEach((item, i) => {
+            console.log(`Ваш любимый жанр ${i + 1} - это ${item}`);
+        });
+    },
+    toggleVisibleMyDB: function() {
+        if (personalMovieDB.privat) {
+            personalMovieDB.privat = false;
+        } else {
+            personalMovieDB.privat = true;
+        }
+    }
+};
+*/
+
+//ДИНАМИЧЕСКАЯ ТИПИЗАЦИЯ - возможность одного типа данных превразаться в доругой
+/*
+//toString
+console.log(String(null)); //почти не используется
+
+
+console.log(typeof(5 + '')); //конкатинация
+
+//toNumber
+console.log(typeof(Number('4'))); //устаревшее
+
+console.log(+'5'); //унарный плюс
+
+console.log(parseInt('5px', 10));
+
+let answ = +prompt('Hello', ''); 
+
+//toBoolean
+
+// 0, '', null, undefined, NaN === false. Остальное - true
+
+*/
