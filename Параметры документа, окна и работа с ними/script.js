@@ -15,3 +15,5 @@ console.log(box.getBoundingClientRect().top);
 
 const style = window.getComputedStyle(box); //через запятую  можно записать стиль псевдоэлемента
 console.log(style.display);
+
+document.documentElement.scrollTop = 0; //Так можно создать кнопку toTop
