@@ -100,19 +100,20 @@ window.addEventListener('DOMContentLoaded', function() {
         modalCloseBtn = document.querySelector('[data-close]');
 
     modalTrigger.forEach(btn => {
-        btn.addEventListener('click', function() {
-            modal.classList.add('show');
-            modal.classList.remove('hide');
-            // Либо вариант с toggle - но тогда назначить класс в верстке
-            document.body.style.overflow = 'hidden';
-        });
+        btn.addEventListener('click', openModal);
     });
 
     function closeModal() {
         modal.classList.add('hide');
         modal.classList.remove('show');
-        // Либо вариант с toggle - но тогда назначить класс в верстке
         document.body.style.overflow = '';
+    }
+
+    function openModal() {
+        modal.classList.add('show');
+        modal.classList.remove('hide');
+        document.body.style.overflow = 'hidden';
+        clearInterval(modalTimerId);
     }
 
     modalCloseBtn.addEventListener('click', closeModal);
@@ -128,4 +129,14 @@ window.addEventListener('DOMContentLoaded', function() {
             closeModal();
         }
     });
+
+    const modalTimerId = setTimeout(openModal, 3000);
+
+    function showModalByScroll() {
+        if (window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight) {
+            openModal();
+            window.removeEventListener('scroll', showModalByScroll);
+        }
+    }
+    window.addEventListener('scroll', showModalByScroll);
 });
