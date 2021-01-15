@@ -8,12 +8,12 @@ function User(name, id) {
     this.human = true;
     this.hello = function() {
         console.log(`Hello, ${this.name}`);
-    }
+    };
 }
 
 User.prototype.exit = function(name) {
     console.log(`Пользователь ${this.name} ушел`);
-}
+};
 
 
 const ivan = new User('Ivan', 28);
@@ -24,4 +24,4 @@ alex.hello();
 ivan.exit();
 
 
-//ES6
+//ES6 Классы
